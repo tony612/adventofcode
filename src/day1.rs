@@ -6,9 +6,9 @@ pub fn run() {
     let lines = body.lines();
     let mut result = 0;
     for line in lines {
-      // println!("{}", line);
-      let number: i32 = line.parse().unwrap();
-      result += number;
+        // println!("{}", line);
+        let number: i32 = line.parse().unwrap();
+        result += number;
     }
     println!("Result is: {}", result);
 }
