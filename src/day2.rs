@@ -6,7 +6,7 @@ pub fn run() {
 }
 
 fn part1() {
-    let body = fs::read_to_string("./input/day2-1.txt").expect("couldn't read the input file");
+    let body = fs::read_to_string("./input/day2.txt").expect("couldn't read the input file");
 
     let lines = body.lines();
     let mut two = 0;
@@ -41,7 +41,7 @@ fn part1() {
 }
 
 fn part2() {
-    let body = fs::read_to_string("./input/day2-1.txt").expect("couldn't read the input file");
+    let body = fs::read_to_string("./input/day2.txt").expect("couldn't read the input file");
     let lines: Vec<&str> = body.lines().collect();
     let len = lines.len();
     let mut diff = 100;

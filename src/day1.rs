@@ -7,7 +7,7 @@ pub fn run() {
 }
 
 fn part1() {
-    let body = fs::read_to_string("./input/day1-1.txt").expect("couldn't read the input file");
+    let body = fs::read_to_string("./input/day1.txt").expect("couldn't read the input file");
 
     let mut result = 0;
     for line in body.lines() {
@@ -19,7 +19,7 @@ fn part1() {
 }
 
 fn part2() {
-    let body = fs::read_to_string("./input/day1-1.txt").expect("couldn't read the input file");
+    let body = fs::read_to_string("./input/day1.txt").expect("couldn't read the input file");
 
     let mut result = 0;
     let mut sum = 0;
