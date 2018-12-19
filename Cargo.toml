@@ -1,5 +1,5 @@
 [package]
-name = "adventureofcode"
+name = "adventofcode"
 version = "0.1.0"
 authors = ["Tony Han <h.bing612@gmail.com>"]
 edition = "2018"
