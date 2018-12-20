@@ -3,10 +3,6 @@ use regex::Regex;
 use std::collections::HashMap;
 
 pub fn run() {
-    part1();
-}
-
-fn part1() {
     let body = fs::read_to_string("./input/day4.txt").expect("couldn't read the input file");
     let line_re = Regex::new(r"\[(.+)\] (.+)").unwrap();
     let mut lines: Vec<(&str, &str)> = body.lines().map(|l| {
@@ -59,7 +55,21 @@ fn part1() {
         .iter().enumerate()
         .max_by(|(_, a), (_, b)| a.cmp(b)).unwrap();
 
-    println!("guard: {}, minute: {}; total_count: {}, count: {}", max_key, min, total_count, count);
+    println!("Part1: guard: {}, minute: {}; total_count: {}, count: {}", max_key, min, total_count, count);
+
+    let mut max_count = 0;
+    let mut max_count_min = 0;
+    let mut max_count_guard = "";
+    for (key, v) in guards.iter() {
+        for (i, c) in v.iter().enumerate() {
+            if *c > max_count {
+                max_count_min = i;
+                max_count_guard = key;
+                max_count = *c;
+            }
+        }
+    }
+    println!("Part2: guard: {}, minute: {}, count: {}", max_count_guard, max_count_min, max_count);
 }
 
 fn parse_time(time: &str) -> (u32, u32) {
